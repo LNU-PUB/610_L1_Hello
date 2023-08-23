@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" media="all" href="styles.css" />
+  <script type="text/javascript" src="main.js" defer></script>
+  <title>1DV610 - L0 Börja programmera igen</title>
+</head>
+<body>
+  <div id="root">
+    <div>
+    <h1 id="headline"></h1>
+    <h6 id="error"></h6>
+    <section>
+        <h2>Instructions</h2>
+        <p>Enter your name and click submit.</p>
+      <form id="nameForm">
+        <label for="name">Name</label><br />
+        <input type="text" name="name" id="name" />
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+</div>
+<footer>
+    <p>Copyright &copy; 
+      <?php 
+        $year = date("Y");
+        echo $year;
+      ?> by Chris Johannesson
+      </p>
+  </footer>
+  </div>
+  
+</body>
+</html>
