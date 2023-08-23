@@ -17,6 +17,10 @@ const handleSubmit = (ev) => {
       data = data.replace(/Börja/, `${name} börja`);
       headline.innerText = data;
       setTimeout(() => {
+        const hl = document.querySelector("#headline");
+        hl.style.backgroundColor = "aliceblue";
+        hl.style.boxShadow = "0px 0px 10px 0px rgba(0,0,0,0.75)";
+        hl.style.color = "navy";
       timerId = setInterval(funStuff, 1000);
       }, 3000);
     }
