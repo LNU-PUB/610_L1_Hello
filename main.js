@@ -1,6 +1,11 @@
 const headlineOriginalText = "1DV610 - L0 Börja programmera igen";
 var timerId;
 
+/**
+ * Handles the submit event from the form.
+ *
+ * @param {SubmitEvent} ev - The submit event object associated with the form submission.
+ */
 const handleSubmit = (ev) => {
   ev.preventDefault();
   const headline = document.querySelector("#headline");
@@ -29,6 +34,12 @@ const handleSubmit = (ev) => {
   }
 };
 
+/**
+ * Handles the error message.
+ * 
+ * @param {string} name - The name of the user.
+ * @param {HTMLElement} error - The error message element.
+ */
 const handleError = (name = "", error) => {
   const text1 = "Det var ditt namn och inte Börjes som vi sökte!";
   const text2 = "Du får nog skriva in ditt namn Börje!";
@@ -37,7 +48,10 @@ const handleError = (name = "", error) => {
   name.length > 0 ? (error.innerText = text1) : (error.innerText = text2);
 };
 
-
+/**
+ * Handles the fun stuff.
+ * Randomly moves the words around in the headline.
+ */
 const funStuff = () => {
   const headline = document.querySelector("#headline");
   let data = headline.textContent;
@@ -46,12 +60,16 @@ const funStuff = () => {
   headline.innerText = dataArray.join(" ");
 }
 
+/**
+ * Starts the application.
+ */
 const start = () => {
   document.querySelector("#headline").innerText = headlineOriginalText;
 }
 
 start();
 
+// Add event listeners to the form.
 document.querySelector("#nameForm").addEventListener("submit", handleSubmit);
 
 window.addEventListener("beforeunload", () => {
